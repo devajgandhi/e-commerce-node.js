@@ -1,4 +1,2 @@
 # ignore lib folder
-lib /
-
-*.md
+node_modules
