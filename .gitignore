@@ -1,2 +1,4 @@
 # ignore lib folder
 node_modules
+
+temp.js
