@@ -10,6 +10,8 @@ var user=require('./routes/user');
 var product=require('./routes/product');
 var order=require('./routes/order');
 var cart=require('./routes/cart');
+const demoNotification = require('./jobs/demo-notification');
+const bNotification = require('./jobs/birthdayReminder');
 var app = express();
 
 // view engine setup
@@ -28,6 +30,8 @@ app.use('/user',user);
 app.use('/product',product);
 app.use('/order',order);
 app.use('/cart',cart);
+demoNotification.demoCron.start();
+bNotification.birthdayCron.start();
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
