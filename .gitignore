@@ -1,0 +1,4 @@
+# ignore lib folder
+lib /
+
+*.md
